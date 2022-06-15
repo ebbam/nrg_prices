@@ -1,0 +1,31 @@
+---
+title: "Preliminary Analysis"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    theme: lumen
+    code_download: yes
+    toc: yes
+    toc_float: yes
+    toc_depth: 2
+    number_sections: yes
+    df_print: paged
+  pdf_document:
+    toc: yes
+    toc_depth: '2'
+---
+  
+```{r, echo=FALSE}
+knitr::opts_chunk$set(comment = NA, echo = TRUE, eval = TRUE, 
+                      warning = FALSE, message = FALSE)
+```
+
+```{r}
+library(tidyverse)
+library(tidyr)
+library(readxl)
+
+y_nrg <- read_xlsx("clean_yr_nrg_price_indices.xlsx")
+q_nrg <- read_xlsx("clean_qtr_nrg_price_indices.xlsx")
+
+```
